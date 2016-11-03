@@ -1,0 +1,11 @@
+workflow:
+    - publish
+shared:
+    image: node:6
+jobs:
+    main:
+        steps:
+            - print: echo Starting main job!
+    publish:
+        steps:
+            - print: echo Starting publish job!
