@@ -1,14 +1,14 @@
 shared:
-    image: node:6
+    image: node:20
+    steps:
+        - echo: echo test
+    annotations:
+        screwdriver.cd/virtualJob: true
 jobs:
     main:
-        steps:
-            - print: echo Starting main job!
         requires:
             - ~pr
             - ~commit
     publish:
-        steps:
-            - print: echo Starting publish job!
         requires:
             - main
